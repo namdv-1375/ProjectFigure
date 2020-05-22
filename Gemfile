@@ -20,6 +20,7 @@ gem "jquery-rails"
 gem "sassc-rails"
 gem "mysql2"
 gem "pry"
+gem "slim"
 
 gem "bootstrap", "~> 4.3.1"
 

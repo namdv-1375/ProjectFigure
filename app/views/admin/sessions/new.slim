@@ -1,0 +1,109 @@
+.image-login
+  nav#navbar-main.navbar.navbar-horizontal.navbar-transparent.navbar-main.navbar-expand-lg.navbar-light
+    .container
+      a.navbar-brand href="dashboard.html" 
+        img src="../assets/img/brand/white.png" /
+      button.navbar-toggler aria-controls="navbar-collapse" aria-expanded="false" aria-label=("Toggle navigation") data-target="#navbar-collapse" data-toggle="collapse" type="button" 
+        span.navbar-toggler-icon
+      #navbar-collapse.navbar-collapse.navbar-custom-collapse.collapse
+        .navbar-collapse-header
+          .row
+            .col-6.collapse-brand
+              a href="dashboard.html" 
+                img src="../assets/img/brand/blue.png" /
+            .col-6.collapse-close
+              button.navbar-toggler aria-controls="navbar-collapse" aria-expanded="false" aria-label=("Toggle navigation") data-target="#navbar-collapse" data-toggle="collapse" type="button" 
+                span
+                span
+        ul.navbar-nav.mr-auto
+          li.nav-item
+            a.nav-link href="dashboard.html" 
+              span.nav-link-inner--text Dashboard
+          li.nav-item
+            a.nav-link href="login.html" 
+              span.nav-link-inner--text Login
+          li.nav-item
+            a.nav-link href="register.html" 
+              span.nav-link-inner--text Register
+        hr.d-lg-none/
+        ul.navbar-nav.align-items-lg-center.ml-lg-auto
+          li.nav-item
+            a.nav-link.nav-link-icon data-original-title=("Like us on Facebook") data-toggle="tooltip" href="https://www.facebook.com/creativetim" target="_blank" 
+              i.fab.fa-facebook-square
+              span.nav-link-inner--text.d-lg-none Facebook
+          li.nav-item
+            a.nav-link.nav-link-icon data-original-title=("Follow us on Instagram") data-toggle="tooltip" href="https://www.instagram.com/creativetimofficial" target="_blank" 
+              i.fab.fa-instagram
+              span.nav-link-inner--text.d-lg-none Instagram
+          li.nav-item
+            a.nav-link.nav-link-icon data-original-title=("Follow us on Twitter") data-toggle="tooltip" href="https://twitter.com/creativetim" target="_blank" 
+              i.fab.fa-twitter-square
+              span.nav-link-inner--text.d-lg-none Twitter
+          li.nav-item
+            a.nav-link.nav-link-icon data-original-title=("Star us on Github") data-toggle="tooltip" href="https://github.com/creativetimofficial" target="_blank" 
+              i.fab.fa-github
+              span.nav-link-inner--text.d-lg-none Github
+          li.nav-item.d-none.d-lg-block.ml-lg-4
+            a.btn.btn-neutral.btn-icon href="https://www.creative-tim.com/product/argon-dashboard-pro?ref=ad_upgrade_pro" target="_blank" 
+              span.btn-inner--icon
+                i.fas.fa-shopping-cart.mr-2
+              span.nav-link-inner--text Upgrade to PRO
+  /! Main content
+  .main-content
+  /! Header
+  .header.bg-gradient-primary.py-7.py-lg-8.pt-lg-9
+    .container
+      .header-body.text-center.mb-7
+        .row.justify-content-center
+          .col-xl-5.col-lg-6.col-md-8.px-5
+            h1.text-white Welcome!
+            p.text-lead.text-white Use these awesome forms to login or create new account in your project for free.
+    .separator.separator-bottom.separator-skew.zindex-100
+      svg preserveaspectratio="none" version="1.1" viewbox=("0 0 2560 100") x="0" xmlns="http://www.w3.org/2000/svg" y="0" 
+        polygon.fill-default points=("2560 0 2560 100 0 100") 
+  /! Page content
+  .container.mt--8.pb-5
+    .row.justify-content-center
+      .col-lg-5.col-md-7
+        .card.bg-secondary.border-0.mb-0
+          .card-header.bg-transparent.pb-5
+            .text-muted.text-center.mt-2.mb-3
+              small Sign in with
+            .btn-wrapper.text-center
+              a.btn.btn-neutral.btn-icon href="#" 
+                span.btn-inner--icon
+                  img src="../assets/img/icons/common/github.svg" /
+                span.btn-inner--text Github
+              a.btn.btn-neutral.btn-icon href="#" 
+                span.btn-inner--icon
+                  img src="../assets/img/icons/common/google.svg" /
+                span.btn-inner--text Google
+          .card-body.px-lg-5.py-lg-5
+            .text-center.text-muted.mb-4
+              small Or sign in with credentials
+            form role="form" 
+              .form-group.mb-3
+                .input-group.input-group-merge.input-group-alternative
+                  .input-group-prepend
+                    span.input-group-text
+                      i.ni.ni-email-83
+                  input.form-control placeholder="Email" type="email" /
+              .form-group
+                .input-group.input-group-merge.input-group-alternative
+                  .input-group-prepend
+                    span.input-group-text
+                      i.ni.ni-lock-circle-open
+                  input.form-control placeholder="Password" type="password" /
+              .custom-control.custom-control-alternative.custom-checkbox
+                input.custom-control-input id=(" customCheckLogin") type="checkbox" /
+                label.custom-control-label for=(" customCheckLogin") 
+                  span.text-muted Remember me
+              .text-center
+                button.btn.btn-primary.my-4 type="button"  Sign in
+        .row.mt-3
+          .col-6
+            a.text-light href="#" 
+              small Forgot password?
+          .col-6.text-right
+            a.text-light href="#" 
+              small Create new account

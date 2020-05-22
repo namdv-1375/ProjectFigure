@@ -1,16 +1,20 @@
 default: &default
-  adapter: postgresql
+  adapter: mysql2
+  username: root
+  password: kaito123
   host: 127.0.0.1
   encoding: utf8
   pool: 5
-  username: namkidd
-  password: kaito123
   reconnect: false
 
 development:
   <<: *default
-  database: pro_okr
+  database: project_figure_dev
 
 test:
   <<: *default
-  database: pro_okr_test
+  database: project_figure_test
+
+production:
+  <<: *default
+  database: project_figure_production
