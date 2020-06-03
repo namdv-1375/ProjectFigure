@@ -5,16 +5,19 @@ Rails.application.routes.draw do
   resources :posts
   namespace :admin do
     resources :product
+    resources :users
 
     as :user do
-      get "signin" => "sessions#new"
-      post "signin" => "sessions#create"
+      get "signup" => "registrations#new"
+      post "registration" => "registrations#create"
+      get "login" => "sessions#new"
+      post "login" => "sessions#create"
       delete "signout" => "sessions#destroy"
     end
   end
 
   as :user do
-    get "signin" => "devise/sessions#new"
+    get "signup" => "devise/sessions#new"
     post "signin" => "devise/sessions#create"
     delete "signout" => "devise/sessions#destroy"
   end

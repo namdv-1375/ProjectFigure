@@ -7,4 +7,11 @@ html
     = stylesheet_link_tag 'admin/application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'admin/application'
   body
-    = yield
+    = render "layouts/admin/nav"
+    #page-wrapper.main-content
+      = render "layouts/admin/header"
+      .wrapper.border-bottom.bg-white.page-heading
+        .col-lg-12
+          = yield :page_header
+      = yield
+      = render "layouts/admin/footer"

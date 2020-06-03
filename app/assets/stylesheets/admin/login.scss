@@ -1,3 +1,38 @@
-.image-login {
-  background-image: image-url('background-login.jpg');
+.bg-login {
+  background-image: image-url('bg-login.jpg');
+}
+
+.bg-signup {
+  background-image: image-url('bg-sign-up.jpg');
+}
+
+.require-field {
+  color: red;
+  z-index: 100;
+  border-right: 1px solid beige !important;
+}
+
+.bg-cl-footer {
+  background-color: #131325;
+}
+
+.custom-py-lg-6-85 {
+  padding-bottom: 6.85rem !important;
+}
+
+.bg-cl-form-signup {
+  background-color: rgba(20, 145, 179, 0.16) !important;
+}
+
+.btn-submit-sign-up {
+  border-color: rgba(20, 145, 179, 0.79);
+  background-color: rgba(20, 145, 179, 0.79);
+  &:hover {
+    border-color: rgba(20, 91, 179, 0.85);
+    background-color: rgba(20, 91, 179, 0.85);
+  }
+}
+
+.py-lg-28-5 {
+  padding-bottom: 28.5rem !important;
 }

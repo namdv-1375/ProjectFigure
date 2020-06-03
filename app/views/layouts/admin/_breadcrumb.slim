@@ -1,0 +1,11 @@
+.header.bg-white.page-heading.custom-height
+  .container-fluid
+    .header-body
+      .row.align-items-center.py-4
+        .col-lg-6.col-7.bc-top-20
+          h2
+            = title
+          ol.breadcrumb
+            li = link_to t(".top"), root_path
+            li = t(".manage_orders")
+            li.active = t(".show_order")
