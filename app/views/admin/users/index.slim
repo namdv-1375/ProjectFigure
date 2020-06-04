@@ -1,20 +1,35 @@
 - content_for :page_header do
   h2
-    = t(".show_order")
+    = t(".list_user")
 
   ol.breadcrumb
-    li = link_to t(".top"), root_path
-    li = t(".manage_orders")
-    li.active = t(".show_order")
+    li = link_to t(".root"), root_path
+    li.active = t(".list_user")
 .wrapper-content
   .ibox
-    .ibox-title
-      = "tesstt"
-    table#dttb.table.table-hover
-      thead
-        tr
-          th Panel No
-      tbody
-        - User.all.each do |user|
+    .ibox-content
+      table#dttb.table.table-bordered
+        thead.thead-custom
           tr
-            td= user.full_name
+            th
+            th full_name
+            th email
+            th birthday
+            th address
+            th tel
+        tbody
+          - User.all.each do |user|
+            tr
+              td
+                = check_box_tag :product_ids, user.id, false,
+                  class: "js-checkbox-single"
+              td
+                = user.full_name
+              td
+                = user.email
+              td
+                = user.birthday
+              td
+                = user.address
+              td
+                = user.tel

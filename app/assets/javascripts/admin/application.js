@@ -1,5 +1,6 @@
 //= require jquery
 //= require jquery_ujs
+//= require "icheck"
 //= require admin/js_cookie
 //= require admin/argon
 //= require bootstrap-sprockets

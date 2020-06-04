@@ -29,6 +29,7 @@ gem "kaminari"
 gem "carrierwave"
 gem "breadcrumbs_on_rails"
 gem "jquery-datatables"
+gem "icheck-rails"
 
 gem "bootstrap", "~> 4.3.1"
 
