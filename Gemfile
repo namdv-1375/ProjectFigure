@@ -30,6 +30,7 @@ gem "carrierwave"
 gem "breadcrumbs_on_rails"
 gem "jquery-datatables"
 gem "icheck-rails"
+gem 'rails-assets-sweetalert2', source: 'https://rails-assets.org'
 
 gem "bootstrap", "~> 4.3.1"
 

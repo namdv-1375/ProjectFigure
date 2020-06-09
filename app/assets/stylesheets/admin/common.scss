@@ -133,3 +133,20 @@ table.dataTable thead th {
 table tr td:last-child {
   border-bottom: none !important;
 }
+
+.left-50 {
+  left: 50px;
+}
+
+.ibox-footer {
+  color: inherit;
+  border-top: 1px solid #e7eaec;
+  font-size: 90%;
+  background: #ffffff;
+  padding: 10px 15px;
+}
+
+.btn-w-m-em {
+  min-width: 11em;
+  max-width: 100%;
+}

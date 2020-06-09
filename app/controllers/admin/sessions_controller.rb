@@ -1,6 +1,6 @@
 module Admin
   class SessionsController < Devise::SessionsController
-    layout "admin/application"
+    layout "admin/login"
     before_action :configure_permitted_parameters, if: :devise_controller?
 
     def new

@@ -4,9 +4,4 @@ $(document).ready(function() {
     "searching": false,
     "bLengthChange": false
   });
-
-//   $("input").iCheck({
-//     checkboxClass: 'icheckbox_minimal',
-//     radioClass: 'iradio_minimal'
-// });
 });

@@ -12,24 +12,37 @@
         thead.thead-custom
           tr
             th
-            th full_name
-            th email
-            th birthday
-            th address
-            th tel
+            th.text-center full_name
+            th.text-center email
+            th.text-center birthday
+            th.text-center address
+            th.text-center tel
+            th.text-center colspan="2"
+              = "action"
         tbody
-          - User.all.each do |user|
+          - @users.each do |user|
             tr
-              td
-                = check_box_tag :product_ids, user.id, false,
-                  class: "js-checkbox-single"
-              td
+              td.text-center
+                .checkbox
+                  .checkbox-container
+                    = check_box_tag :product_ids, user.id, false,
+                      class: "js-checkbox-single", id: "user-checkbox"
+                    .checkbox-checkmark
+                  label for="checkbox-unchecked"
+              td.text-center
                 = user.full_name
-              td
+              td.text-center
                 = user.email
-              td
+              td.text-center
                 = user.birthday
-              td
+              td.text-center
                 = user.address
-              td
+              td.text-center
                 = user.tel
+              td.text-center
+                = "edit"
+              td.text-center
+                = link_to "delete", admin_user_path(user), method: :delete, data: { confirm: 'Are you sure?' }
+    .ibox-footer.text-center
+      span.m-l
+      = link_to "New", new_admin_user_path, class: "btn btn-primary btn-w-m-em"

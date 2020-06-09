@@ -4,6 +4,7 @@
 //= require admin/js_cookie
 //= require admin/argon
 //= require bootstrap-sprockets
+//= require admin/dashboard
+//= require sweetalert2
 //= require admin/datatables
 //= require admin/users
-//= require admin/dashboard

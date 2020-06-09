@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
 
   mount_uploader :avatar, AvatarUploader
 
+  scope :all_except, ->(user) { where.not(id: user) }
+
   def self.find_for_database_authentication(conditions={})
     find_by(username: conditions[:username])
   end
