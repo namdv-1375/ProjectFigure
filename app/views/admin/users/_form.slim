@@ -1,33 +1,42 @@
-= simple_form_for User.new, url: admin_users_path do |f|
-  .form-group
-    .input-group.input-group-merge.input-group-alternative.mb-3
-      .input-group-prepend
-        span.input-group-text
-          i.fa.fa-id-card
-      = f.input_field :full_name, placeholder: "Full Name", class: "form-control"
-  .form-group
-    .input-group.input-group-merge.input-group-alternative.mb-3
-      .input-group-prepend
-        span.input-group-text
-          i.fa.fa-user
-      = f.input_field :username, placeholder: "Login Name", class: "form-control"
-      span.input-group-text.require-field
-        = "*"
-  .form-group
-    .input-group.input-group-merge.input-group-alternative.mb-3
-      .input-group-prepend
-        span.input-group-text
-          i.ni.ni-email-83
-      = f.input_field :email, type: :email, class: "form-control", placeholder: 'Email'
-      span.input-group-text.require-field
-        = "*"
-  .form-group
-    .input-group.input-group-merge.input-group-alternative
-      .input-group-prepend
-        span.input-group-text
-          i.ni.ni-lock-circle-open
-      = f.input_field :password, type: :password, class: "form-control", placeholder: 'Password'
-      span.input-group-text.require-field
-        = "*"
-  .text-center
-    = f.button :submit, class: "btn btn-primary mt-4 btn-submit-sign-up"
+= simple_form_for @user, url: admin_users_path do |f|
+  .ibox-content
+    .form-group
+      .input-group.input-group-merge.input-group-alternative.mb-3
+        .input-group-prepend
+          span.input-group-text
+            i.fa.fa-id-card
+        = f.label "Avatar"
+        = f.file_field :avatar
+  .ibox-content
+    .form-group
+      .input-group.input-group-merge.input-group-alternative.mb-3
+        .input-group-prepend
+          span.input-group-text
+            i.fa.fa-id-card
+        = f.input_field :full_name, placeholder: "Full Name", class: "form-control"
+    .form-group
+      .input-group.input-group-merge.input-group-alternative.mb-3
+        .input-group-prepend
+          span.input-group-text
+            i.fa.fa-user
+        = f.input_field :username, placeholder: "Login Name", class: "form-control"
+        span.input-group-text.require-field
+          = "*"
+    .form-group
+      .input-group.input-group-merge.input-group-alternative.mb-3
+        .input-group-prepend
+          span.input-group-text
+            i.ni.ni-email-83
+        = f.input_field :email, type: :email, class: "form-control", placeholder: 'Email'
+        span.input-group-text.require-field
+          = "*"
+    .form-group
+      .input-group.input-group-merge.input-group-alternative
+        .input-group-prepend
+          span.input-group-text
+            i.ni.ni-lock-circle-open
+        = f.input_field :password, type: :password, class: "form-control", placeholder: 'Password'
+        span.input-group-text.require-field
+          = "*"
+    .text-center
+      = f.button :submit, class: "btn btn-primary mt-4 btn-submit-sign-up"

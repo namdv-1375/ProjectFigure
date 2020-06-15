@@ -1,11 +1,11 @@
 - content_for :page_header do
   h2
-    = t(".new_user")
+    = t(".edit_user")
 
   ol.breadcrumb
     li = link_to t(".root"), root_path
     li = link_to t(".list_user"), admin_users_path
-    li.active = t(".new_user")
+    li.active = t(".edit_user")
 .wrapper-content
   .ibox
     .ibox-content

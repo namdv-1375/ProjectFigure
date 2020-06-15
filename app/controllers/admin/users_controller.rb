@@ -1,13 +1,15 @@
 module Admin
   class UsersController < ApplicationController
-    before_action :load_user, only: [:edit, :update, :destroy]
+    before_action :load_user, only: [:show, :edit, :update, :destroy]
 
     def index
       add_breadcrumb "index", root_path, title: "Back to the Index"
       @users = User.all_except(current_user)
     end
 
-    def new;end
+    def new
+      @user = User.new
+    end
 
     def destroy
       @user.destroy
